@@ -1,0 +1,12 @@
+/* Webfont: AmmarDemo */@font-face {
+    font-family: 'AmmarDemo';
+    src: url('AmmarDemo.eot'); /* IE9 Compat Modes */
+    src: url('AmmarDemo.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('AmmarDemo.woff') format('woff'), /* Modern Browsers */
+         url('AmmarDemo.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('AmmarDemo.svg#AmmarDemo') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
