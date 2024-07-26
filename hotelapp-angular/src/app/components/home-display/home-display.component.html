@@ -1,1 +1,18 @@
-<p>home-display works!</p>
+
+
+
+
+
+
+
+<div class="home-display-container">
+    <img [src]="images[currentImageIndex]" alt="Beach Image" class="display-image">
+    <div class="controls">
+      <button mat-button  (click)="cycleImage()">Next Image</button>
+      <button mat-button (click)="incrementCounter()">Click Counter: {{ clickCounter }}</button>
+      <button mat-button (click)= incrementCounter()>Basic</button>
+    </div>
+  </div>
+  
+  <div class="counter-display" id="clickCounter">Click Counter: {{ clickCounter }}</div>
+  <button type="button"  (click)="incrementCounter()">Increment Counter</button>

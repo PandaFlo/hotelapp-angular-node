@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'hotelapp-angular';
+
+  clickCounter: number = 6;
+  incrementCounter(): void {
+    this.clickCounter++;
+  }
+
+
 }
