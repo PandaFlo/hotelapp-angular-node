@@ -11,19 +11,28 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+import { MatCardModule } from '@angular/material/card';
+import { CardComponent } from './components/card/card.component';
+import { CardCarouselComponent } from './components/card-carousel/card-carousel.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    HomeDisplayComponent
+    HomeDisplayComponent,
+    CardComponent,
+    CardCarouselComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatButtonModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule
 
   ],
   providers: [

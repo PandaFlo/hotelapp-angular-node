@@ -1,2 +1,14 @@
 <app-navbar></app-navbar>
 <app-home-display></app-home-display>
+<div>
+    <app-card-carousel
+      [cards]="[
+        { imageUrl: 'assets/images/cards/card1.png', lineOne: 'First line of text', lineTwo: 'Second line of text', lineThree: 'Third line of text', link: '', cardSize: 'short' },
+        { imageUrl: 'assets/images/cards/card1.png', lineOne: 'Second line of text', lineTwo: 'Second line of text', lineThree: 'Third line of text', link: '', cardSize: 'short' },
+        { imageUrl: 'assets/images/cards/card1.png', lineOne: 'Third line of text', lineTwo: 'Second line of text', lineThree: 'Third line of text', link: '', cardSize: 'short', width: '400px', height: '250px' },
+        { imageUrl: 'assets/images/cards/card1.png', lineOne: 'Fourth line of text', lineTwo: 'Second line of text', lineThree: 'Third line of text', link: '', cardSize: 'short', width: '400px', height: '250px' },
+        { imageUrl: 'assets/images/cards/card1.png', lineOne: 'Fifth line of text', lineTwo: 'Second line of text', lineThree: 'Third line of text', link: '', cardSize: 'short', width: '400px', height: '250px' },
+        { imageUrl: 'assets/images/cards/card1.png', lineOne: 'Sixth line of text', lineTwo: 'Second line of text', lineThree: 'Third line of text', link: '', cardSize: 'short', width: '400px', height: '250px' }
+      ]">
+    </app-card-carousel>
+    </div>

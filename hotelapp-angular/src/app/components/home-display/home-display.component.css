@@ -1,22 +1,81 @@
 .home-display-container {
-    text-align: center;
-  }
-  
-  .display-image {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    margin: 0 auto;
-    display: block;
-  }
-  
-  .controls {
-    margin-top: 20px;
-  }
-  
-  .controls button {
-    margin: 0 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-  }
-  
+  text-align: center;
+  position: relative;
+}
+
+.search-bar-container {
+  position: absolute;
+  top: 100px; /* Position from the top */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.8); /* White background with reduced opacity */
+  padding: 20px; /* Add padding to the container */
+  border-radius: 8px; /* Rounded corners for the container */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for better visibility */
+}
+
+.search-bar-group {
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+.search-input, .search-button {
+  margin: 0; /* Remove margin */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  outline: none; /* Remove focus outline */
+}
+
+.search-input {
+  padding: 20px; /* Increase padding */
+  font-size: 20px; /* Increase font size */
+  width: 300px; /* Increase width */
+  box-sizing: border-box;
+  background-color: white; /* White background */
+}
+
+.location-input {
+  /* Ensure no additional styles */
+}
+
+.date-input {
+  margin-left: -2px; /* Adjust to bring back together */
+  border-left: none; /* Ensure no left border */
+}
+
+.search-button {
+  padding: 20px; /* Match the padding of search inputs */
+  font-size: 20px; /* Increase font size */
+  width: 350px; /* Increase width */
+  background-color: #f0f0f0; /* Light gray color */
+  color: black; /* Text color */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer;
+  margin-left: 0; /* Ensure alignment */
+  height: 100%; /* Match the height of search inputs */
+  line-height: 1; /* Adjust line height to center text vertically */
+  outline: none; /* Remove focus outline */
+}
+
+.search-button:hover {
+  background-color: #d0d0d0; /* Darker gray on hover */
+}
+
+.display-image {
+  width: 100%; /* Stretch to the edge of the window */
+  height: auto; /* Retain aspect ratio */
+  max-height: 45vw; /* Maximum height of 45% of the viewport width */
+  display: block;
+  margin: 0 auto;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+.controls button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+}

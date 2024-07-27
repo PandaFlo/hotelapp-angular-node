@@ -1,0 +1,26 @@
+<div class="carousel-wrapper">
+    <div class="carousel-container">
+      <button *ngIf="dots.length > 1" class="nav-button prev" (click)="prevSlide()">&#10094;</button>
+      <div class="carousel">
+        <app-card *ngFor="let card of visibleCards" [card]="card"></app-card>
+      </div>
+      <button *ngIf="dots.length > 1" class="nav-button next" (click)="nextSlide()">&#10095;</button>
+    </div>
+    <div *ngIf="dots.length > 1" class="dots-container">
+      <ng-container *ngIf="dots.length <= 5">
+        <span *ngFor="let dot of dots; let i = index"
+              [class.active]="i === activeIndex"
+              (click)="goToSlide(i)">
+        </span>
+      </ng-container>
+      <ng-container *ngIf="dots.length > 5">
+        <span *ngIf="activeIndex > 2">...</span>
+        <span *ngFor="let dot of visibleDots"
+              [class.active]="dot === activeIndex"
+              (click)="goToSlide(dot)">
+        </span>
+        <span *ngIf="activeIndex < dots.length - 3">...</span>
+      </ng-container>
+    </div>
+  </div>
+  
