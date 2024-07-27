@@ -1,52 +1,70 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Carousel Styles */
 .carousel-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f0f0f0; /* Light gray background */
-    padding: 20px; /* Add some padding around the carousel */
-  }
-  
-  .carousel-container {
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
-  
-  .nav-button {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-  }
-  
-  .carousel {
-    display: flex;
-    overflow: hidden;
-  }
-  
-  app-card {
-    flex: 0 0 auto;
-    margin: 0 10px; /* Space between cards */
-  }
-  
-  .dots-container {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-  }
-  
-  .dots-container span {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .dots-container span.active {
-    background-color: #717171;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent; /* Light gray background */
+  padding: 20px; /* Add some padding around the carousel */
+  width: 100%;
+  overflow: hidden; /* Prevent overflow */
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the carousel content */
+  position: relative;
+  width: 100%;
+  box-sizing: border-box; /* Ensure any padding/margin is included in width calculation */
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1; /* Ensure buttons are above carousel content */
+}
+
+.carousel {
+  display: flex;
+  justify-content: center; /* Center the cards within the carousel */
+  overflow: hidden;
+  width: 100%;
+  flex-grow: 1; /* Allow the carousel to grow and take available space */
+}
+
+app-card {
+  flex: 0 0 auto;
+  margin: 0 10px; /* Space between cards */
+}
+
+.dots-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+.dots-container span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dots-container span.active {
+  background-color: #717171;
+}

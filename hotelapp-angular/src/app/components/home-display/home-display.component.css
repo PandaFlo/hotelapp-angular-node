@@ -1,12 +1,17 @@
 .home-display-container {
   text-align: center;
   position: relative;
+  width: 100%; /* Ensure it spans the full viewport width */
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 .search-bar-container {
   position: absolute;
   top: 100px; /* Position from the top */
   left: 50%;
+  width: 70%;
   transform: translateX(-50%);
   background-color: rgba(255, 255, 255, 0.8); /* White background with reduced opacity */
   padding: 20px; /* Add padding to the container */
@@ -29,13 +34,9 @@
 .search-input {
   padding: 20px; /* Increase padding */
   font-size: 20px; /* Increase font size */
-  width: 300px; /* Increase width */
+  width: 37%; /* Increase width */
   box-sizing: border-box;
   background-color: white; /* White background */
-}
-
-.location-input {
-  /* Ensure no additional styles */
 }
 
 .date-input {
@@ -46,7 +47,7 @@
 .search-button {
   padding: 20px; /* Match the padding of search inputs */
   font-size: 20px; /* Increase font size */
-  width: 350px; /* Increase width */
+  width: 26%; /* Increase width */
   background-color: #f0f0f0; /* Light gray color */
   color: black; /* Text color */
   border: none; /* Remove border */
@@ -63,11 +64,10 @@
 }
 
 .display-image {
-  width: 100%; /* Stretch to the edge of the window */
+  width: 100%; /* Ensure image spans the full viewport width */
   height: auto; /* Retain aspect ratio */
-  max-height: 45vw; /* Maximum height of 45% of the viewport width */
-  display: block;
-  margin: 0 auto;
+  max-height: 55vw; /* Maximum height of 55% of the viewport width */
+  margin: 0 auto; /* Center the image */
 }
 
 .controls {

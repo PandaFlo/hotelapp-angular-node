@@ -15,6 +15,10 @@ import { MatCardModule } from '@angular/material/card';
 import { CardComponent } from './components/card/card.component';
 import { CardCarouselComponent } from './components/card-carousel/card-carousel.component';
 
+import { LargeCard1Component } from './components/largeCards/large-card1/large-card1.component';
+import { LargeCard2Component } from './components/largeCards/large-card2/large-card2.component';
+
+
 
 @NgModule({
   declarations: [
@@ -23,7 +27,10 @@ import { CardCarouselComponent } from './components/card-carousel/card-carousel.
     HomeComponent,
     HomeDisplayComponent,
     CardComponent,
-    CardCarouselComponent
+    CardCarouselComponent,
+    LargeCard1Component,
+    LargeCard2Component
+
 
   ],
   imports: [

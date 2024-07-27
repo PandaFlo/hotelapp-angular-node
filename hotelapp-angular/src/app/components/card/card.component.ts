@@ -1,6 +1,8 @@
 // card.component.ts
 import { Component, Input } from '@angular/core';
-import { DisplayCard } from '../../model/displaycard';
+import { DisplayCard } from '../../model/DisplayCard';
+
+
 
 
 @Component({

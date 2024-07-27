@@ -1,0 +1,52 @@
+<div class="card-container">
+    <div class="card">
+      <ng-container *ngIf="!flip; else flippedContent">
+        <div class="card-left" [ngClass]="{'image-background': leftContent.type === 'image', 'text-background': leftContent.type !== 'image'}">
+          <ng-container *ngIf="leftContent.type === 'image'">
+            <img [src]="leftContent.data" alt="Left content image">
+          </ng-container>
+          <ng-container *ngIf="leftContent.type === 'text'">
+            <div class="text-content" [ngClass]="textAlign" [innerHTML]="leftContent.data"></div>
+          </ng-container>
+          <div class="card-buttons">
+            <button (click)="navigateTo(leftButtonLink1)" class="card-button">{{ leftButtonText1 }}</button>
+            <button (click)="navigateTo(leftButtonLink2)" class="card-button">{{ leftButtonText2 }}</button>
+          </div>
+        </div>
+        <div class="card-right" [ngClass]="{'image-background': rightContent.type === 'image', 'text-background': rightContent.type !== 'image'}">
+          <ng-container *ngIf="rightContent.type === 'image'">
+            <img [src]="rightContent.data" alt="Right content image">
+          </ng-container>
+          <ng-container *ngIf="rightContent.type === 'text'">
+            <div class="text-content" [ngClass]="textAlign" [innerHTML]="rightContent.data"></div>
+          </ng-container>
+        </div>
+      </ng-container>
+      <ng-template #flippedContent>
+        <div class="card-left" [ngClass]="{'image-background': rightContent.type === 'image', 'text-background': rightContent.type !== 'image'}">
+          <ng-container *ngIf="rightContent.type === 'image'">
+            <img [src]="rightContent.data" alt="Right content image">
+          </ng-container>
+          <ng-container *ngIf="rightContent.type === 'text'">
+            <div class="text-content" [ngClass]="textAlign" [innerHTML]="rightContent.data"></div>
+          </ng-container>
+          
+        </div>
+        <div class="card-right" [ngClass]="{'image-background': leftContent.type === 'image', 'text-background': leftContent.type !== 'image'}">
+          <ng-container *ngIf="leftContent.type === 'image'">
+            <img [src]="leftContent.data" alt="Left content image">
+          </ng-container>
+          <ng-container *ngIf="leftContent.type === 'text'">
+            <div class="text-content" [ngClass]="textAlign" [innerHTML]="leftContent.data"></div>
+          </ng-container>
+<div class="card-buttons">
+            <button (click)="navigateTo(leftButtonLink1)" class="card-button">{{ leftButtonText1 }}</button>
+            <button (click)="navigateTo(leftButtonLink2)" class="card-button">{{ leftButtonText2 }}</button>
+          </div>
+
+
+        </div>
+      </ng-template>
+    </div>
+  </div>
+  

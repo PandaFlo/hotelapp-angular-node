@@ -36,15 +36,12 @@ export class HomeDisplayComponent implements OnInit, OnDestroy {
       const imagePath = `../../assets/images/beachpics/beachpic${i}.png`;
       this.images.push(imagePath);
     }
-    console.log('Initialized images:', this.images);
+
   }
 
   cycleImage(): void {
-    console.log('Cycling image');
     if (this.images.length > 0) {
-      this.currentImageIndex = (this.currentImageIndex + 1) % this.images.length;
-      console.log('Current image index:', this.currentImageIndex);
-      this.cdr.markForCheck(); // Ensure Angular's change detection is triggered
+      this.currentImageIndex = (this.currentImageIndex + 1) % this.images.length; // Ensure Angular's change detection is triggered
     }
   }
 

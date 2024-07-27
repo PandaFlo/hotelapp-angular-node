@@ -1,6 +1,8 @@
+
+<div class = "homeContainer">
 <app-navbar></app-navbar>
 <app-home-display></app-home-display>
-<div>
+<div class = "carousel-container">
     <app-card-carousel
       [cards]="[
         { imageUrl: 'assets/images/cards/card1.png', lineOne: 'First line of text', lineTwo: 'Second line of text', lineThree: 'Third line of text', link: '', cardSize: 'short' },
@@ -11,4 +13,11 @@
         { imageUrl: 'assets/images/cards/card1.png', lineOne: 'Sixth line of text', lineTwo: 'Second line of text', lineThree: 'Third line of text', link: '', cardSize: 'short', width: '400px', height: '250px' }
       ]">
     </app-card-carousel>
-    </div>
+ </div>
+ <button (click)="incrementCount()">{{count}}</button>
+
+ <app-large-card1>  </app-large-card1>  
+ <app-large-card2>  </app-large-card2>
+
+<br><br>
+</div>

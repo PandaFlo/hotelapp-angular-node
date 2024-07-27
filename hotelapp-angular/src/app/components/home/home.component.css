@@ -1,0 +1,12 @@
+.homeContainer{
+    width: 100%;
+    align-items: center;
+   background-color:  #f4f4f4;
+   max-width: 100vw
+}
+
+.caroselContainer{
+    width: 100%;
+    align-items: center;
+    margin-top: 20px;
+}

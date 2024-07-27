@@ -2,7 +2,7 @@ import { Component, Input, HostListener, OnInit, Inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { PLATFORM_ID } from '@angular/core';
 import { WindowService } from '../../services/window.service';
-import { DisplayCard } from '../../model/displaycard';
+import { DisplayCard } from '../../model/DisplayCard';
 
 @Component({
   selector: 'app-card-carousel',
