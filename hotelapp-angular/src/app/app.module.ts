@@ -20,6 +20,7 @@ import { LargeCard2Component } from './components/largeCards/large-card2/large-c
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

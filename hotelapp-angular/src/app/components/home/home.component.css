@@ -1,12 +1,18 @@
-.homeContainer{
-    width: 100%;
+*{
     align-items: center;
-   background-color:  #f4f4f4;
-   max-width: 100vw
 }
 
-.caroselContainer{
+
+.homeContainer{
     width: 100%;
+    
     align-items: center;
-    margin-top: 20px;
+   background-color:  #f4f4f4;
+overflow-x: auto;
+   display : flex;
+   flex-direction: column;
+}
+
+*{
+    font-family: 'Merriweather', serif
 }

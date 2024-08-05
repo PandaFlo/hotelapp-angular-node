@@ -10,7 +10,7 @@ import { ChangeDetectorRef } from '@angular/core';
 export class HomeDisplayComponent implements OnInit, OnDestroy {
   currentImageIndex: number = 0;
   images: string[] = [];
-  totalImages: number = 5;
+  totalImages: number = 6;
   autoScrollInterval: any;
   isBrowser: boolean;
 

@@ -1,5 +1,5 @@
 <div class="card-container">
-    <div class="card">
+    <div class="card" [ngStyle]="{'width.px': cardWidth, 'height.px': cardHeight}">
       <div class="card-left" [ngClass]="{'image-background': leftContent.type === 'image', 'text-background': leftContent.type !== 'image'}">
         <ng-container *ngIf="leftContent.type === 'image'">
           <img [src]="leftContent.data" alt="Left content image">
@@ -18,3 +18,4 @@
       </div>
     </div>
   </div>
+  

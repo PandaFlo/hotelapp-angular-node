@@ -1,13 +1,13 @@
-<div class="custom-card" [ngClass]="getCardClass()" [ngStyle]="getCustomStyles()" [routerLink]="card.link">
-  <div class="card-image-container" [ngStyle]="{'background-image': 'url(' + card.imageUrl + ')'}">
+<a [routerLink]="card?.link ?? '#'" class="custom-card" [ngClass]="getCardClass()" [ngStyle]="getCustomStyles()">
+  <div class="card-image-container" [ngStyle]="{'background-image': 'url(' + (card?.imageUrl ?? '') + ')'}">
     <div class="card-text-overlay">
-      <p class="lineOne">{{ card.lineOne }}</p>
-      <p class="lineTwo">{{ card.lineTwo }}</p>
+      <p class="lineOne">{{ card?.lineOne ?? '' }}</p>
+      <p class="lineTwo">{{ card?.lineTwo ?? '' }}</p>
       <div class="lineThree">
-        {{ card.lineThree }}
-        <span class="arrow-right">&#9654;</span>
+        {{ card?.lineThree ?? '' }}
+        <span *ngIf="card?.showArrow" class="arrow-right">&#9654;</span>
       </div>
     </div>
   </div>
   <div class="card-gradient-overlay"></div>
-</div>
+</a>

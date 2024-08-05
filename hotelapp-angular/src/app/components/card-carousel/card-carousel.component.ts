@@ -49,7 +49,7 @@ export class CardCarouselComponent implements OnInit {
   }
 
   updateCardCount() {
-    const width = this.isBrowser ? this.windowService.nativeWindow.innerWidth : 0;
+    const width = this.isBrowser ? this.windowService.nativeWindow.innerWidth - 40 : 0; // Subtract 40 pixels for arrows
     const totalCardWidth = this.cardWidth + 2 * this.cardMargin;
     let cardCount = Math.floor(width / totalCardWidth);
 
