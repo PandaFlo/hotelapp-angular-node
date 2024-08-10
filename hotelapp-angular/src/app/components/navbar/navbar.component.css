@@ -1,18 +1,20 @@
 
-
+*{
+    z-index: 10000;
+}
 
 .navbar-outtercontainer {
     display: flex;
-    flex-direction: column;;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: white;
     position: relative;
-    width: 99vw;
+    width: 100%;
     top: -10px;
     font-family: 'Playfair Display', serif;
     background-color: transparent;
-
+    z-index: 10000;
 }
 
 .navbar-innercontainer {
@@ -46,21 +48,36 @@
     height: 30px;
     position: absolute;
     top: -63px;
-    left: 10%; /* Changed from left: 100px to right: 0 */
+    left: 10%; /* Default value */
     width: 100%;
     background-color: transparent;
+
 }
 
-.top-navbar a {
+.top-navbar a, app-sign-in {
     color: black;
     text-decoration: none;
     padding: 0 10px;
     font-size: 20px;
     line-height: 30px;
+    cursor: pointer;
 }
 
-.top-navbar a:hover {
+.top-navbar a:hover, app-sign-in:hover {
     text-decoration: underline;
+}
+
+/* Sign-in form dropdown */
+.top-navbar app-sign-in .sign-in-form {
+    position: absolute;
+    top: 35px; /* Positioning below the navbar */
+    right: 0;  /* Align with the right side of the sign-in link */
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1000;
 }
 
 .navbar .menu {
@@ -72,14 +89,14 @@
     width: 100%;
 }
 
-.navbar a {
+.navbar a, app-sign-in {
     color: black;
     text-decoration: none;
     padding: 0 20px;
     line-height: 50px;
 }
 
-.navbar a:hover {
+.navbar a:hover, app-sign-in:hover {
     text-decoration: underline;
 }
 
@@ -88,4 +105,11 @@
     height: 200px;
     margin-right: 20px;
     z-index: 10;
+}
+
+/* Media query for viewport width of 1000px */
+@media (max-width: 1300px) {
+    .top-navbar {
+        left: 4%;
+    }
 }

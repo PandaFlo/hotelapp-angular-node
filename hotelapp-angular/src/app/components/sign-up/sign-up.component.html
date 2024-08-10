@@ -1,0 +1,65 @@
+<app-display
+  imageUrl="assets/images/beachpics/beachpic1.png"
+  line1Text="Welcome to the best hotel booking site"
+  line2Text="Book now and save big"
+  [verticalLength]="300"
+  textColor="white"
+  textAlign="left"
+  [line1Size]="30"
+  [line2Size]="25">
+</app-display>
+<div class="card">
+<app-card cardSize="custom" [height]="'200px'"  [width]="'1200px'" [showArrow]="false"
+          imageUrl="/assets/images/beachpics/cabinpic1.png" lineThree="Cozy Times Await" l>  </app-card>
+</div>
+
+
+<div class="sign-up-container">
+  <!-- Sign in link at the top left -->
+  <div class="sign-in-link">
+    <small>Already a member?   <a [routerLink]="['/sign-in']"> Sign in</a></small>
+  </div>
+
+
+
+
+  <form (ngSubmit)="onSubmit()" class="sign-up-form">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" [(ngModel)]="firstName" required>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" [(ngModel)]="lastName" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" [(ngModel)]="email" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" [(ngModel)]="password" required>
+    </div>
+    <div class="form-group">
+      <label for="confirmPassword">Confirm Password</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" [(ngModel)]="confirmPassword" [disabled]="!password" required>
+    </div>
+    
+    <!-- Remember Me Checkbox -->
+    <div class="remember-me">
+      <label>Remember Me</label>
+      <label class="switch">
+        <input type="checkbox" [(ngModel)]="rememberMe">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+
+    <div class="form-buttons">
+      <button type="submit" class="join-button">Join</button>
+      <button type="button" class="cancel-button" (click)="onCancel()">Cancel</button>
+    </div>
+  </form>
+</div>

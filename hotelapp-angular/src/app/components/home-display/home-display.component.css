@@ -1,10 +1,11 @@
 .home-display-container {
   text-align: center;
   position: relative;
-  width: 99vw; /* Ensure it spans the full viewport width */
+  width: 100vw; /* Ensure it spans the full viewport width */
   margin: 0; /* Remove any default margin */
   padding: 0; /* Remove any default padding */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  z-index: 1; /* Ensure it appears above other elements */
 }
 
 .search-bar-container {
@@ -70,6 +71,8 @@
   height: auto; /* Retain aspect ratio */
   max-height: 55vw; /* Maximum height of 55% of the viewport width */
   margin: 0 auto; /* Center the image */
+  z-index: -1; /* Send the image behind other elements */
+  position: relative;
 }
 
 .controls {

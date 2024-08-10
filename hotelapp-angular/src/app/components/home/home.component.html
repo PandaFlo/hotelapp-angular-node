@@ -1,97 +1,101 @@
 <div class="homeContainer">
-  <app-navbar></app-navbar>
+
   <app-home-display></app-home-display>
 
   <app-card
   cardSize="custom"
   width="1000px"
   height="200px"
-  [showArrow]="false">
+  [showArrow]="false"
+  imageUrl="assets/images/beachpics/beachpic7.png"
+  [lineOne]="'Learn about our service and why we have no compition'"
+  [textAlign]="'center'">
 </app-card>
 
-    <app-card-carousel
-      [cards]="[
-        {
-          imageUrl: 'assets/images/cards/card2.png',
-          lineOne: 'The best hotels in one place',
-          lineTwo: '',
-          lineThree: 'Save on 5+ Nights',
-          link: '#',
+<app-card-carousel
+[cards]="[
+  {
+    imageUrl: 'assets/images/cards/card2.png',
+    lineOne: 'The best hotels in one place',
+    lineTwo: '',
+    lineThree: 'Save on 5+ Nights',
+    link: '#',
 
-        },
-        {
-          imageUrl: 'assets/images/cards/card1.png',
-          lineOne: 'Resort Retreats',
-          lineTwo: 'Earn 2x points',
-          lineThree: 'On all bookings',
-          link: '',
+  },
+  {
+    imageUrl: 'assets/images/cards/card1.png',
+    lineOne: 'Resort Retreats',
+    lineTwo: 'Earn 2x points',
+    lineThree: 'On all bookings',
+    link: '',
 
-        },
-        {
-            imageUrl: 'assets/images/cards/card3.png',
-            lineOne: 'City Escapes',
-            lineTwo: 'Free breakfast',
-            lineThree: 'Included with stay',
-            link: '',
-        },
-        {
-            imageUrl: 'assets/images/cards/card4.png',
-            lineOne: 'Luxury Resorts',
-            lineTwo: 'Up to 50% off',
-            lineThree: 'Experience luxury at its best',
-            link: '',
-        },
-        {
-            imageUrl: 'assets/images/cards/card5.png',
-            lineOne: 'Adventure Awaits',
-            lineTwo: 'Book early',
-            lineThree: 'Save big on your next adventure',
-            link: '',
-        },
-        {
-            imageUrl: 'assets/images/cards/card6.png',
-            lineOne: 'Beachfront Bliss',
-            lineTwo: 'Kids stay free',
-            lineThree: 'Family-friendly fun awaits',
-            link: '',
-        },
-        {
-            imageUrl: 'assets/images/cards/card7.png',
-            lineOne: 'Mountain Retreats',
-            lineTwo: 'Nature at its best',
-            lineThree: 'Perfect for hikers',
-            link: '',
-        },
-        {
-            imageUrl: 'assets/images/cards/card8.png',
-            lineOne: 'Cultural Journeys',
-            lineTwo: 'Immerse in local traditions',
-            lineThree: 'Discover rich heritage',
-            link: '',
-        },
-        {
-            imageUrl: 'assets/images/cards/card9.png',
-            lineOne: 'Romantic Escapes',
-            lineTwo: 'Couples specials',
-            lineThree: 'Intimate settings for romance',
-            link: '',
-        },
-        {
-            imageUrl: 'assets/images/cards/card10.png',
-            lineOne: 'Wildlife Safaris',
-            lineTwo: 'Once in a lifetime',
-            lineThree: 'Experience nature up close',
-            link: '',
-        }
-    
-      ]"
-    >
-    </app-card-carousel>
+  },
+  {
+      imageUrl: 'assets/images/cards/card3.png',
+      lineOne: 'City Escapes',
+      lineTwo: 'Free breakfast',
+      lineThree: 'Included with stay',
+      link: '',
+  },
+  {
+      imageUrl: 'assets/images/cards/card4.png',
+      lineOne: 'Luxury Resorts',
+      lineTwo: 'Up to 50% off',
+      lineThree: 'Experience luxury at its best',
+      link: '',
+  },
+  {
+      imageUrl: 'assets/images/cards/card5.png',
+      lineOne: 'Adventure Awaits',
+      lineTwo: 'Book early',
+      lineThree: 'Save big on your next adventure',
+      link: '',
+  },
+  {
+      imageUrl: 'assets/images/cards/card6.png',
+      lineOne: 'Beachfront Bliss',
+      lineTwo: 'Kids stay free',
+      lineThree: 'Family-friendly fun awaits',
+      link: '',
+  },
+  {
+      imageUrl: 'assets/images/cards/card7.png',
+      lineOne: 'Mountain Retreats',
+      lineTwo: 'Nature at its best',
+      lineThree: 'Perfect for hikers',
+      link: '',
+  },
+  {
+      imageUrl: 'assets/images/cards/card8.png',
+      lineOne: 'Cultural Journeys',
+      lineTwo: 'Immerse in local traditions',
+      lineThree: 'Discover rich heritage',
+      link: '',
+  },
+  {
+      imageUrl: 'assets/images/cards/card9.png',
+      lineOne: 'Romantic Escapes',
+      lineTwo: 'Couples specials',
+      lineThree: 'Intimate settings for romance',
+      link: '',
+  },
+  {
+      imageUrl: 'assets/images/cards/card10.png',
+      lineOne: 'Wildlife Safaris',
+      lineTwo: 'Once in a lifetime',
+      lineThree: 'Experience nature up close',
+      link: '',
+  }
 
-  <button (click)="incrementCount()">{{ count }}</button>
+]"
+>
+</app-card-carousel>
 
-  <app-large-card1> </app-large-card1>
-<app-large-card2> </app-large-card2>
+
+<app-large-card2
+buttonText1="Sign Up"
+buttonText2="Sign In"
+> </app-large-card2>
 
   <br /><br />
 </div>

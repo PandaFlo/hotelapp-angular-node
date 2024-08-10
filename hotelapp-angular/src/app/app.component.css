@@ -1,6 +1,18 @@
 
-body {
+* {
     font-family: 'Playfair Display', serif;
     align-items: center;
     overflow: hidden;
+    width : 100%;
+  }
+
+
+  app-navbar {
+
+    z-index: 10000;
+  }
+  router-outlet {
+    width: 100vw;
+    overflow-x: hidden;
+    z-index: 1;
   }

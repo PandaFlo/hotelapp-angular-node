@@ -1,6 +1,6 @@
 <a [routerLink]="card?.link ?? '#'" class="custom-card" [ngClass]="getCardClass()" [ngStyle]="getCustomStyles()">
   <div class="card-image-container" [ngStyle]="{'background-image': 'url(' + (card?.imageUrl ?? '') + ')'}">
-    <div class="card-text-overlay">
+    <div class="card-text-overlay" [ngClass]="getTextAlignClass()">
       <p class="lineOne">{{ card?.lineOne ?? '' }}</p>
       <p class="lineTwo">{{ card?.lineTwo ?? '' }}</p>
       <div class="lineThree">

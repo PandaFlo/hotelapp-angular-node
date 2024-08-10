@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, HostListener, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { DisplayCard } from '../../model/DisplayCard';
 
 @Component({
@@ -18,6 +19,11 @@ export class CardComponent implements OnInit {
   @Input() width: string = '400px';
   @Input() height: string = '250px';
   @Input() showArrow: boolean = true;
+  @Input() textAlign: 'left' | 'right' | 'center' = 'right'; // New input for text alignment
+
+  dynamicWidth: string = '';
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngOnInit() {
     const defaultCard: DisplayCard = {
@@ -30,13 +36,33 @@ export class CardComponent implements OnInit {
       width: this.width,
       height: this.height,
       showArrow: this.showArrow
+
     };
 
     this.card = { ...defaultCard, ...this.card };
 
-    // Ensure showArrow has a default value if not set
-    if (this.card.showArrow === undefined) {
-      this.card.showArrow = true;
+    if (isPlatformBrowser(this.platformId)) {
+      this.adjustCardWidth();
+    }
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    if (isPlatformBrowser(this.platformId)) {
+      this.adjustCardWidth();
+    }
+  }
+
+  adjustCardWidth() {
+    if (isPlatformBrowser(this.platformId)) {
+      const cardWidth = parseInt(this.card!.width || '400');
+      const viewportWidth = window.innerWidth;
+
+      if (viewportWidth < cardWidth) {
+        this.dynamicWidth = '80vw';
+      } else {
+        this.dynamicWidth = `${cardWidth}px`;
+      }
     }
   }
 
@@ -55,8 +81,20 @@ export class CardComponent implements OnInit {
 
   getCustomStyles() {
     return this.card!.cardSize === 'custom' ? {
-      '--card-width': this.card!.width,
-      '--card-height': this.card!.height
+      '--card-width': this.dynamicWidth,
+      '--card-height': this.card!.height || '250px'
     } : {};
+  }
+
+  getTextAlignClass() {
+    switch (this.textAlign) {
+      case 'left':
+        return 'text-align-left';
+      case 'center':
+        return 'text-align-center';
+      case 'right':
+      default:
+        return 'text-align-right';
+    }
   }
 }

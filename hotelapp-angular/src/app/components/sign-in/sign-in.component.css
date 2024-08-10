@@ -1,0 +1,108 @@
+/* Sign-In Container Styling */
+.sign-in-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Sign-In Toggle Link Styling */
+.sign-in-toggle {
+    cursor: pointer;
+    color: inherit;
+    font-size: 20px; /* Increased font size */
+    text-decoration: none;
+}
+
+.sign-in-toggle:hover {
+    text-decoration: underline;
+}
+
+/* Sign-In Form Styling */
+.sign-in-form {
+    position: absolute;
+    top: 100%;
+    right: 0; /* Align the form to the right */
+    width: 300px;
+    padding: 10px 15px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 10000;
+}
+
+.sign-in-form::before {
+    content: "";
+    position: absolute;
+    top: -10px; /* Position it above the form */
+    right: 10px; /* Adjust this value to position the triangle relative to the form */
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+}
+
+/* Header Styling */
+.sign-in-form h2 {
+    margin-top: 0;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* Input Group Styling */
+.input-group {
+    margin-bottom: 8px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 18px;
+}
+
+/* Actions Section Styling */
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.actions label {
+    font-size: 18px;
+}
+
+.sign-in-button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.sign-in-button:hover {
+    background-color: #0056b3;
+}
+
+/* Forgot Password Link Styling */
+.forgot-password {
+    display: block;
+    text-align: right;
+    font-size: 18px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}

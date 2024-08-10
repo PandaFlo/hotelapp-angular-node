@@ -1,0 +1,9 @@
+<a [href]="linkUrl || 'javascript:void(0);'" class="display-link">
+    <div class="display-container" [style.background-image]="'url(' + imageUrl + ')'" [style.height.px]="verticalLength">
+      <div class="text-overlay" [ngStyle]="{'text-align': textAlign, 'color': textColor}">
+        <div class="line1" [ngStyle]="{'font-size.px': line1Size}">{{ line1Text }}</div>
+        <div class="line2" [ngStyle]="{'font-size.px': line2Size}">{{ line2Text }}</div>
+      </div>
+    </div>
+  </a>
+  

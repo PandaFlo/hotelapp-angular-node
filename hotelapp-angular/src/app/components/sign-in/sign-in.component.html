@@ -1,0 +1,21 @@
+<div class="sign-in-container">
+    <a class="sign-in-toggle" (click)="toggleVisibility()">Sign In</a>
+    <div class="sign-in-form" *ngIf="isVisible">
+        <h2>Sign in to your account</h2>
+        <div class="input-group">
+            <label for="emailOrTravelNumber">Email or Travel Number</label>
+            <input type="text" id="emailOrTravelNumber">
+        </div>
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password">
+        </div>
+        <div class="actions">
+            <label>
+                <input type="checkbox"> Remember me
+            </label>
+            <button class="sign-in-button">Sign In</button>
+        </div>
+        <a href="#" class="forgot-password">Forgot password?</a>
+    </div>
+</div>

@@ -4,37 +4,39 @@
 }
 
 .custom-card {
-  display: block; /* Ensure it behaves as a block element */
-  position: relative; /* Required for absolute positioning of the overlay */
-  overflow: hidden; /* Ensure no overflow of content */
-  margin: 16px; /* Space around the card, adjust as needed */
-  border-radius: 8px; /* Optional: Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Shadow effect */
-  text-decoration: none; /* Remove underline from link */
-  color: inherit; /* Inherit text color */
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  color: inherit;
+  width: var(--card-width);
+  height: var(--card-height);
 }
 
 .card-tall {
-  width: 250px; /* Example width for tall cards */
-  height: 400px; /* Example height for tall cards */
+  width: 250px;
+  height: 400px;
 }
 
 .card-short {
-  width: 400px; /* Example width for short cards */
-  height: 250px; /* Example height for short cards */
+  width: 400px;
+  height: 250px;
 }
 
 .card-custom {
-  width: var(--card-width, 400px); /* Default width for custom cards */
-  height: var(--card-height, 250px); /* Default height for custom cards */
+  width: var(--card-width, 400px);
+  height: var(--card-height, 250px);
 }
 
 .card-image-container {
   width: 100%;
-  height: 100%; /* Ensure it takes full height of the card */
-  background-size: cover; /* Ensure the image covers the container */
-  background-position: center; /* Center the image */
-  position: absolute; /* Ensure it covers the entire card */
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
   top: 0;
   left: 0;
 }
@@ -44,18 +46,32 @@
   bottom: 0;
   right: 0;
   width: auto;
-  height: auto; /* Adjust to fit the text content */
+  height: auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align text to the left */
-  justify-content: flex-end; /* Align text to the bottom */
-  color: white; /* Adjust text color for better visibility on the image */
-  background: transparent; /* Remove background */
-  padding: 16px; /* Padding around text, adjust as needed */
-  box-sizing: border-box; /* Ensure padding does not affect the card dimensions */
-  text-align: left; /* Align text to the left */
-  box-shadow: none; /* Remove shadow effect */
-  z-index: 1; /* Ensure text is above the gradient */
+  justify-content: flex-end;
+  color: white;
+  background: transparent;
+  padding: 16px;
+  box-sizing: border-box;
+  box-shadow: none;
+  z-index: 1;
+}
+
+/* Alignment classes */
+.text-align-left {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.text-align-center {
+  align-items: center;
+  text-align: center;
+}
+
+.text-align-right {
+  align-items: flex-end;
+  text-align: right;
 }
 
 .card-gradient-overlay {
@@ -63,16 +79,16 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 30%; /* Adjust to cover 30% of the card from the bottom */
+  height: 30%;
   background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-  pointer-events: none; /* Ensure the gradient does not interfere with interactions */
-  z-index: 0; /* Ensure gradient is below the text */
+  pointer-events: none;
+  z-index: 0;
 }
 
 .lineOne,
 .lineTwo,
 .lineThree {
-  margin: 4px 0; /* Space between text elements */
+  margin: 4px 0;
 }
 
 .lineOne {
@@ -110,4 +126,11 @@
 
 .custom-card button:hover {
   background: rgba(0, 0, 0, 0.8);
+}
+
+/* Media query to adjust card width for small screens */
+@media (max-width: 400px) {
+  .custom-card {
+    width: 80vw;  /* 80% of the viewport width */
+  }
 }

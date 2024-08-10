@@ -1,0 +1,40 @@
+.display-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  
+  .display-container {
+    width: 100vw; /* Full viewport width */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .text-overlay {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: inherit;
+    text-align: inherit; /* Inherit text alignment from the component input */
+    padding: 0 200px; /* Add horizontal padding to keep text away from edges */
+    box-sizing: border-box; /* Ensures padding is included in element's total width */
+  }
+  
+  .line1, .line2 {
+    font-weight: bold;
+    width: 100%; /* Ensure the text spans the entire width for alignment */
+  }
+  
+  .line1 {
+    font-size: 25px; /* Default size */
+  }
+  
+  .line2 {
+    font-size: 15px; /* Default size */
+  }
+  

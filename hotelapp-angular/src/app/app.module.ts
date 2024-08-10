@@ -17,6 +17,10 @@ import { CardCarouselComponent } from './components/card-carousel/card-carousel.
 
 import { LargeCard1Component } from './components/largeCards/large-card1/large-card1.component';
 import { LargeCard2Component } from './components/largeCards/large-card2/large-card2.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { DisplayComponent } from './components/display/display.component';
+
 
 
 
@@ -30,7 +34,10 @@ import { LargeCard2Component } from './components/largeCards/large-card2/large-c
     CardComponent,
     CardCarouselComponent,
     LargeCard1Component,
-    LargeCard2Component
+    LargeCard2Component,
+    SignUpComponent,
+    SignInComponent,
+    DisplayComponent
 
 
   ],

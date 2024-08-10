@@ -1,25 +1,24 @@
 <div class="card-container">
-    <div class="card" [ngStyle]="{'width.px': cardWidth, 'height.px': cardHeight}">
-      <div class="card-left" [ngClass]="{'image-background': leftContent.type === 'image', 'text-background': leftContent.type !== 'image'}">
-        <ng-container *ngIf="leftContent.type === 'image'">
-          <img [src]="leftContent.data" alt="Left content image">
-        </ng-container>
-        <ng-container *ngIf="leftContent.type === 'text'">
-          <div class="text-container" [innerHTML]="leftContent.data"></div>
-        </ng-container>
-        <div class="button-container">
-          <button class="card-button black-button" (click)="navigateTo(link1)">{{buttonText1}}</button>
-          <button class="card-button white-button" (click)="navigateTo(link2)">{{buttonText2}}</button>
-        </div>
-      </div>
-      <div class="card-right" [ngClass]="{'image-background': rightContent.type === 'image', 'text-background': rightContent.type !== 'image'}">
-        <ng-container *ngIf="rightContent.type === 'image'">
-          <img [src]="rightContent.data" alt="Right content image">
-        </ng-container>
-        <ng-container *ngIf="rightContent.type === 'text'">
-          <div [innerHTML]="rightContent.data"></div>
-        </ng-container>
+  <div class="card" [ngStyle]="{'width.px': cardWidth, 'height.px': cardHeight}">
+    <div class="card-left" [ngClass]="{'image-background': leftContent.type === 'image', 'text-background': leftContent.type !== 'image'}">
+      <ng-container *ngIf="leftContent.type === 'image'">
+        <img [src]="leftContent.data" alt="Left content image">
+      </ng-container>
+      <ng-container *ngIf="leftContent.type === 'text'">
+        <div class="text-container" [innerHTML]="leftContent.data"></div>
+      </ng-container>
+      <div class="button-container">
+        <button class="card-button black-button" (click)="navigateTo(link1)">{{buttonText1}}</button>
+        <button class="card-button white-button" (click)="navigateTo(link2)">{{buttonText2}}</button>
       </div>
     </div>
+    <div class="card-right" [ngClass]="{'image-background': rightContent.type === 'image', 'text-background': rightContent.type !== 'image'}">
+      <ng-container *ngIf="rightContent.type === 'image'">
+        <img [src]="rightContent.data" alt="Right content image">
+      </ng-container>
+      <ng-container *ngIf="rightContent.type === 'text'">
+        <div [innerHTML]="rightContent.data"></div>
+      </ng-container>
+    </div>
   </div>
-  
+</div>
